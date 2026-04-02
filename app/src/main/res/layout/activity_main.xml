@@ -1,81 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="24dp"
-    android:background="#F0F4C3"> <!-- Jasnozielony dla odróżnienia od klienta -->
+    android:background="?attr/colorSurface">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="PANEL ADMINISTRATORA"
-        android:textSize="24sp"
+        android:text="BlueBank Admin"
+        android:textSize="28sp"
         android:textStyle="bold"
-        android:textColor="#33691E"
-        android:gravity="center"
-        android:layout_marginBottom="24dp"/>
+        android:textColor="?attr/colorPrimary"
+        android:layout_marginBottom="32dp"/>
 
-    <EditText
-        android:id="@+id/etName"
+    <!-- Karta: Dodaj Klienta -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardAddClient"
+        style="?attr/materialCardViewElevatedStyle"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:hint="Imię klienta"
-        android:background="#FFFFFF"
-        android:padding="12dp"
-        android:layout_marginBottom="12dp"/>
+        android:layout_height="100dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:focusable="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dodaj Nowego Klienta"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
+    </com.google.android.material.card.MaterialCardView>
 
-    <EditText
-        android:id="@+id/etSurname"
+    <!-- Karta: Zarządzaj Klientem -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardManageClient"
+        style="?attr/materialCardViewElevatedStyle"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:hint="Nazwisko klienta"
-        android:background="#FFFFFF"
-        android:padding="12dp"
-        android:layout_marginBottom="12dp"/>
+        android:layout_height="100dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:focusable="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Zarządzaj Klientem"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
+    </com.google.android.material.card.MaterialCardView>
 
-    <EditText
-        android:id="@+id/etPhone"
+    <!-- Karta: Skanuj Kartę (Identyfikacja) -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardScanNfc"
+        style="?attr/materialCardViewFilledStyle"
+        app:cardBackgroundColor="?attr/colorSecondaryContainer"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:hint="Numer telefonu"
-        android:inputType="phone"
-        android:background="#FFFFFF"
-        android:padding="12dp"
-        android:layout_marginBottom="24dp"/>
-
-    <Button
-        android:id="@+id/btnCreateClient"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:text="UTWÓRZ KLIENTA"
-        android:backgroundTint="#558B2F"
-        android:textSize="18sp"/>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="#C5E1A5"
-        android:layout_marginVertical="24dp"/>
-
-    <TextView
-        android:id="@+id/tvAccountInfo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Utwórz klienta, by nadać numer konta"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:layout_marginBottom="16dp"/>
-
-    <TextView
-        android:id="@+id/tvNfcStatus"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Moduł NFC wstrzymany"
-        android:textColor="#9E9E9E"
-        android:textSize="18sp"
-        android:gravity="center"
-        android:textStyle="italic"/>
+        android:layout_height="100dp"
+        android:clickable="true"
+        android:focusable="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Zidentyfikuj po Karcie (NFC)"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnSecondaryContainer"
+            android:layout_gravity="center"/>
+    </com.google.android.material.card.MaterialCardView>
 
 </LinearLayout>
