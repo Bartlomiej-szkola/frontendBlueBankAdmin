@@ -27,6 +27,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".AddClientActivity"/>
+        <activity android:name=".ManageClientActivity"/>
+        <activity android:name=".ClientDetailsActivity"/>
     </application>
 
 </manifest>

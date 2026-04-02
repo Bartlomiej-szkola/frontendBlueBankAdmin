@@ -14,15 +14,15 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, AddClientActivity::class.java))
         }
 
-//        findViewById<MaterialCardView>(R.id.cardManageClient).setOnClickListener {
-//            startActivity(Intent(this, ManageClientActivity::class.java))
-//        }
+        findViewById<MaterialCardView>(R.id.cardManageClient).setOnClickListener {
+            startActivity(Intent(this, ManageClientActivity::class.java))
+        }
 
-//        findViewById<MaterialCardView>(R.id.cardScanNfc).setOnClickListener {
-//            // Tymczasowo przekierowuje do menadżera, by pokazać popup NFC
-//            val intent = Intent(this, ManageClientActivity::class.java)
-//            intent.putExtra("SCAN_MODE", true)
-//            startActivity(intent)
-//        }
+        findViewById<MaterialCardView>(R.id.cardScanNfc).setOnClickListener {
+            // Tymczasowo przekierowuje do menadżera, by pokazać popup NFC
+            val intent = Intent(this, ManageClientActivity::class.java)
+            intent.putExtra("SCAN_MODE", true)
+            startActivity(intent)
+        }
     }
 }

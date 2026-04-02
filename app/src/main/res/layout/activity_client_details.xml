@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tvAccountTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Konto: Ładowanie..."
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimary"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText android:id="@+id/etEditName" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Imię" />
+        <EditText android:id="@+id/etEditSurname" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Nazwisko" android:layout_marginTop="8dp"/>
+        <EditText android:id="@+id/etEditPhone" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Numer telefonu" android:inputType="phone" android:layout_marginTop="8dp"/>
+
+        <Button
+            android:id="@+id/btnSaveChanges"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="ZAPISZ ZMIANY"
+            android:layout_marginTop="16dp"/>
+
+        <View android:layout_width="match_parent" android:layout_height="2dp" android:background="#E0E0E0" android:layout_marginVertical="24dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="KARTY PŁATNICZE (ZBLIŻ NOWĄ, ABY DODAĆ)"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#757575"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Tutaj będziemy dynamicznie wstawiać karty -->
+        <LinearLayout
+            android:id="@+id/layoutCardsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+    </LinearLayout>
+</ScrollView>
